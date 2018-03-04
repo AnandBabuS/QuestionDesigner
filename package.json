@@ -1,0 +1,51 @@
+{
+  "name": "questiondesigner",
+  "version": "1.0.0",
+  "description": "This enables us to have a question and corresponding multi choice answers ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnandBabuS/QuestionDesigner.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.0.0",
+    "bootstrap-css": "^4.0.0-alpha.5",
+    "css-loader": "^0.28.9",
+    "lodash": "^4.17.5",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "devDependencies": {
+    "babel-preset-stage-3": "^6.24.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "image-webpack-loader": "^4.0.0",
+    "node-sass": "^4.7.2"
+  },
+  "keywords": [
+    "React",
+    "QuestionsCreator"
+  ],
+  "author": "anand babu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnandBabuS/QuestionDesigner/issues"
+  },
+  "homepage": "https://github.com/AnandBabuS/QuestionDesigner#readme"
+}
