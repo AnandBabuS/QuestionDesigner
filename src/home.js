@@ -1,4 +1,5 @@
 import React from 'react'
+import isEmpty from 'lodash/isEmpty'
 import Questions from './questions'
 import Options from './options'
 import Buttons from './buttons'
@@ -11,7 +12,8 @@ export default class Home extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {
+        const history = localStorage.getItem("questionDesignState")
+        this.state = !isEmpty(history) ? JSON.parse(history) : {
             questions: {},
             options: {},
             selectedData: '',
@@ -79,15 +81,19 @@ export default class Home extends React.Component {
         })
     }
 
+    componentDidUpdate() {
+        localStorage.setItem("questionDesignState", JSON.stringify(this.state))
+    }
+
     render() {
         return (
-        <div className="container-fluid full-height">
+        <div className="container-fluid full-height base">
             <div className="row full-height">
-                <div className="col-lg-4 full-height bordered">
+                <div className="col-lg-4 full-height questionPanel">
                     <Questions onSelected={this.handleSelected} questions={this.state.questions} selectedData={this.state.selectedData}/>
                     <Buttons onCreate={this.createData} onDelete={this.deleteData} />
                 </div>
-                <div className="col-lg-8 full-height">
+                <div className="col-lg-8 full-height inputPanel">
                     <Options addOption={this.addOption} deleteOption={this.deleteOption} onQuestionChange={this.onQuestionChange} question={this.state.questions[this.state.selectedData]} onChange={ this.onChange } options={ this.state.options[this.state.selectedData] } />
                 </div>
             </div>

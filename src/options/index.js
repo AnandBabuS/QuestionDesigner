@@ -9,19 +9,27 @@ const Options = ( { options, selectedData, onChange, question, onQuestionChange,
         return <Option option={option} key={index} onChange={onChange} index={index} />
     })
     const displayOperations = !isEmpty(options)
+    const disableDelete = options && options.length <= 2
+    const disableCreate = options && options.length >= 6
     return (
         <div>
             { displayOperations && (
-            <div>
+            <div className="question">
                 <label> Question </label>
-                <input value={question} onChange={onQuestionChange} />
+                <input className="inputField fullWidth" value={question} onChange={onQuestionChange} />
             </div>) }
-            <div className="container">
+            <div className="container options">
                 <div className="row">
                     { option }
                 </div>
             </div>
-            { displayOperations && (<Buttons onCreate={addOption} onDelete={deleteOption} />) }
+            { displayOperations && (
+                <Buttons
+                    disableDelete={disableDelete}
+                    disableCreate={disableCreate}
+                    onCreate={addOption}
+                    onDelete={deleteOption}
+                />) }
         </div>
     )
 }

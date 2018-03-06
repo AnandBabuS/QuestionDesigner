@@ -6,14 +6,52 @@ html {
     height: 100%;
   }
 
+  .base {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+  }
+
   .full-height {
       height: 100%;
   }
 
-  .bordered {
-      border: 3px solid black
+  .questionPanel {
+    background-color: rgb(50, 50, 148);
+  }
+
+  .inputPanel {
+      background-color: cornflowerblue;
   }
 
   .selectable {
       cursor: pointer;
+  }
+
+  .inputField {
+      margin-left: 10px;
+      padding-left: 10px;
+  }
+
+  .fullWidth {
+    width: 90%;
+  }
+
+  .button {
+      margin: 10px;
+  }
+
+  .midSizeWidth {
+      width: 50%;
+  }
+
+  .alignCenter{
+      text-align: center;
+  }
+
+  .options {
+      margin: 2%;
+  }
+
+  .question {
+      margin-top: 2%;
   }
